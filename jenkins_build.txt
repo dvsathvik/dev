@@ -1,1 +1,4 @@
+Build step:
+execute Window batch command
+
 "C:\Users\dvsat\AppData\Local\Programs\Python\Python312/python.exe" C:\Users\dvsat\OneDrive\Desktop\selenium\a.py
