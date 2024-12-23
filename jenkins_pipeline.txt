@@ -1,0 +1,36 @@
+JOB3:
+Build steps:
+execute Window batch Programs
+echo "Hi 3"
+
+
+
+JOB2:
+Build steps:
+execute Window batch Programs
+echo "Hi 2"
+
+post Build steps:
+Build other projects:
+JOB3
+
+
+
+JOB1:
+Build steps:
+execute Window batch Programs
+echo "Hi 1"
+
+post Build steps:
+Build other projects:
+JOB2
+
+
+
+
+Dashboard -> New -> Build pipeline -> create -> upstream/downstream JOB:
+
+JOB1
+
+
+Build pipeline -> Build now
