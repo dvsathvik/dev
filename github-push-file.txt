@@ -1,0 +1,24 @@
+If reprository has a master:
+
+    git init
+    git remote add origin <repository-url>
+    git add <file-name>
+    git commit -m "Add myfile.txt"
+    git push origin <branch-name>
+    git push origin main
+
+Else:
+
+    echo "# dev" >> README.md
+    git init
+    git add README.md
+    git commit -m "first commit"
+    git branch -M main
+    git remote add origin <repository-url>
+    git push -u origin main
+    git add <file-name>
+    git commit -m "Add myfile.txt"
+    git push origin <branch-name>
+    git push origin main
+
+
