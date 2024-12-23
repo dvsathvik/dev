@@ -1,0 +1,15 @@
+Here are some common Git and GitHub commands.
+•	Initializing a git repository: $git init 
+•	 
+•	Checking the status of your repository: $ git status
+•	 
+•	Adding files to the stage: $ git add
+• Committing changes: $ git commit -m "commit message"
+ • Checking the commit history: $ git log 
+ 
+• Undoing changes: $ git checkout
+ • Creating a new branch: $ git branch 
+• Switching to a different branch: $ git checkout 
+• Merging two branches: $ git merge 
+• Pushing changes to a remote repository: $ git push origin 
+• Cloning a repository from GitHub: $ git clone 

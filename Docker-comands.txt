@@ -1,0 +1,60 @@
+docker Commands for Content Management
+1. docker run <image Name>
+•	Description: Runs a command in a new container. It’s one of the most used docker commands because it creates and starts a new container.
+•	Syntax: docker run [OPTIONS] IMAGE [COMMAND] [ARG...]
+•	Example: $ docker run --name mycontainer -it ubuntu:16.04 /bin/bash
+o	Explanation:
+	--name mycontainer: Assigns the name "mycontainer" to the container.
+	-it: Combines -i (interactive) and -t (pseudo-TTY) options to keep the container running interactively.
+
+1.5 docker build -t <image Name>
+
+2. docker start <container Name>
+•	Description: Starts one or more stopped containers. It does not create a new container but starts an existing one.
+•	Syntax: docker start [OPTIONS] CONTAINER [CONTAINER...]
+•	Example: $ docker start mycontainer
+o	Explanation: Starts the container named "mycontainer".
+
+
+3. docker stop <container Name>
+•	Description: Stops one or more running containers. It sends a SIGTERM signal to the main process inside the container, allowing it to exit gracefully.
+•	Syntax: docker stop [OPTIONS] CONTAINER [CONTAINER...]
+•	Example: $ docker stop mycontainer
+o	Explanation: Stops the container named "mycontainer".
+
+
+4. docker rm <container Name>
+•	Description: Removes one or more containers. The container must be stopped before it can be removed.
+•	Syntax: docker rm [OPTIONS] CONTAINER [CONTAINER...]
+•	Example: $ docker rm mycontainer
+o	Explanation: Removes the container named "mycontainer".
+ 
+
+
+5. docker ps
+•	Description: Lists containers. By default, it shows only running containers.
+•	Syntax: docker ps [OPTIONS]
+•	Example: $ docker ps
+o	Explanation: Lists all currently running containers. To list all containers, including stopped ones, use docker ps -a.
+
+
+6. docker images
+•	Description: Lists images. It shows all the docker images available on the local host.
+•	Syntax: docker images [OPTIONS] [REPOSITORY[:TAG]]
+•	Example: $ docker images
+o	Explanation: Lists all images stored locally on the host.
+ 
+7. docker pull <image Name>
+•	Description: Pulls an image or a repository from a registry. It downloads the image from a docker registry like docker Hub.
+•	Syntax: docker pull [OPTIONS] NAME[:TAG|@DIGEST]
+•	Example: $ docker pull ubuntu:16.04
+o	Explanation: Pulls the Ubuntu 16.04 image from the docker Hub registry.
+
+
+8. docker push  <image Name>
+•	Description: Pushes an image or a repository to a registry. It uploads the image to a docker registry.
+•	Syntax: docker push [OPTIONS] NAME[:TAG]
+•	Example: $ docker push myimage
+o	Explanation: Pushes the image named "myimage" to the docker Hub registry.
+
+9. docker rmi  <image Name>

@@ -1,0 +1,31 @@
+# "Dokerfile"
+# Use the official Node.js image
+FROM node:14
+
+# Set the working directory
+WORKDIR /app
+
+# Copy package.json and package-lock.json to the working directory
+COPY package*.json ./
+
+# Install dependencies
+RUN npm install
+
+# Copy the rest of your application files
+COPY . .
+
+# Install Microsoft Edge and dependencies for Selenium
+RUN apt-get update && apt-get install -y wget gnupg \
+    && wget -q -O - https://packages.microsoft.com/keys/microsoft.asc | apt-key add - \
+    && sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge stable main" > /etc/apt/sources.list.d/microsoft-edge-dev.list' \
+    && apt-get update && apt-get install -y microsoft-edge-dev
+
+# Add user so we don't need --no-sandbox.
+RUN groupadd -r chrome && useradd -r -g chrome -G audio,video chrome \
+    && mkdir -p /home/chrome && chown -R chrome:chrome /home/chrome
+
+# Run as non-root user
+USER chrome
+
+# Command to run your script
+CMD ["node", "your-script-file.js"]
