@@ -1,5 +1,5 @@
 
-## Notes App Compose 
+## Notes App 
 
 - The Notes App is a simple and intuitive application designed for creating, managing, and organizing your notes seamlessly.
  Whether you're a student, professional, or anyone who loves to jot down thoughts, this app provides an efficient way to keep track of
