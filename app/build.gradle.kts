@@ -72,7 +72,7 @@ dependencies {
 
     // Compose dependencies
     implementation("androidx.lifecycle:lifecycle-viewmodel-compose:2.7.0-alpha01")
-    implementation("androidx.navigation:navigation-compose:2.7.0")
+    implementation("androidx.navigation:navigation-compose:2.9.6")
     implementation("androidx.compose.material:material-icons-extended:1.5.0")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0-alpha01")
 
